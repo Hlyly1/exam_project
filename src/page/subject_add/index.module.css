@@ -1,0 +1,42 @@
+.subjectAdd{
+    height: calc(100vh-150px);
+    background-color: pink;
+}
+.content{
+    display: flex;
+}
+.left{
+    background-color: yellow;
+    padding: 20px;
+    flex: 1;
+    overflow: auto;
+}
+
+.right{
+    background-color: red;
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+}
+.top{
+    width: 100%;
+    height: 50px;
+    background-color: #ccc;
+    display: flex;
+}
+.top_wrap{
+    width: 5px;
+    height: 100%;
+    background-color: red;
+}
+.top_left{
+    margin-left: 50px;
+}
+.top_right{
+    width: 300px;
+    margin-left: 50px;
+}
+.button{
+    margin-left: 50px;
+    
+}
