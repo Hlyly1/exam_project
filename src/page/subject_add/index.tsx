@@ -1,7 +1,10 @@
+import { get_subject_tree_async } from "@/store/slice/subject";
 import style from "./index.module.css";
 import { TreeSelect } from "antd";
 import { TreeSelectProps, Button } from "antd";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { AppDispatch } from "@/store";
 function SubjectAdd() {
   const treeData = [
     {
@@ -52,7 +55,10 @@ function SubjectAdd() {
     },
   ];
   const [value, setValue] = useState<string>();
-
+  const dispatch: AppDispatch = useDispatch();
+  useEffect(() => {
+    dispatch(get_subject_tree_async());
+  }, []);
   const onChange = (newValue: string) => {
     setValue(newValue);
   };
